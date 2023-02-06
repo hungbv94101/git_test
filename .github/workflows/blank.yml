@@ -34,3 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      - name: Build
+        working-directory: ./src/github.com/${{ github.repository }}
+        run: go build -v .
